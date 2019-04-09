@@ -2,7 +2,9 @@
 	"name": "switchtocode",
 	"displayName": "SwitchToCode",
 	"description": "Allows to switch between html/ts and aspx/aspx.cs files",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"publisher": "AlexShashkin",
+	"repository": {"url": "https://github.com/GreenAirplane/SwitchToCodeVSCodeExtension"},
 	"engines": {
 		"vscode": "^1.33.0"
 	},
