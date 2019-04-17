@@ -12,7 +12,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.switchToCode"
+		"onCommand:extension.switchToCode",
+		"onCommand:extension.switchToCss"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -20,6 +21,10 @@
 			{
 				"command": "extension.switchToCode",
 				"title": "Switch to Code/Designer"
+			},
+			{
+				"command": "extension.switchToCss",
+				"title": "Switch to CSS/SCSS"
 			}
 		]
 	},

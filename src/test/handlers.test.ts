@@ -12,7 +12,6 @@ import aspxcsHandler from '../handlers/aspxcs-handler';
 import htmlHandler from '../handlers/html-handler';
 import tsHandler from '../handlers/ts-handler';
 import vuehtmlHandler from '../handlers/vuehtml-handler';
-import cssHandler from '../handlers/css-handler';
 
 // Defines a Mocha test suite to group tests of similar kind together
 suite('Handlers Tests', function() {
