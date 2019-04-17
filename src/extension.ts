@@ -7,6 +7,7 @@ import aspxcsHandler from './handlers/aspxcs-handler';
 import htmlHandler from './handlers/html-handler';
 import tsHandler from './handlers/ts-handler';
 import vuehtmlHandler from './handlers/vuehtml-handler';
+import cssHandler from './handlers/css-handler';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -33,7 +34,8 @@ export function activate(context: vscode.ExtensionContext) {
                 !(newFile = aspxcsHandler.getNewUrl(fileName)) &&
                 !(newFile = vuehtmlHandler.getNewUrl(fileName)) &&
                 !(newFile = htmlHandler.getNewUrl(fileName)) &&
-                !(newFile = tsHandler.getNewUrlWithFileCheck(fileName, dir))
+                !(newFile = tsHandler.getNewUrlWithFileCheck(fileName, dir)) &&
+                !(newFile = cssHandler.getNewUrlWithFileCheck(fileName, dir))
             ) {
                 return;
             }

@@ -12,6 +12,7 @@ import aspxcsHandler from '../handlers/aspxcs-handler';
 import htmlHandler from '../handlers/html-handler';
 import tsHandler from '../handlers/ts-handler';
 import vuehtmlHandler from '../handlers/vuehtml-handler';
+import cssHandler from '../handlers/css-handler';
 
 // Defines a Mocha test suite to group tests of similar kind together
 suite('Extension Tests', function() {
@@ -72,6 +73,59 @@ suite('Extension Tests', function() {
         const oldFile = 'default.ts';
 
         const newFile = tsHandler.getNewUrlWithFileCheck(oldFile, dir);
+
+        assert.equal(newFile, 'default.vue.html');
+    });
+
+    test('CSS Handler Test for *.css and file.html', function() {
+        const dir = 'd:/project/app';
+        const oldFile = 'default.css';
+
+        const fsConfig: any = {};
+        fsConfig[dir] = {
+            'default.html': ''
+        };
+        mock(fsConfig);
+
+        const newFile = cssHandler.getNewUrlWithFileCheck(oldFile, dir);
+
+        assert.equal(newFile, 'default.html');
+
+        mock.restore();
+    });
+
+    test('CSS Handler Test for *.css and file.vue.html', function() {
+        const dir = 'project/app';
+        const oldFile = 'default.css';
+
+        const newFile = cssHandler.getNewUrlWithFileCheck(oldFile, dir);
+
+        assert.equal(newFile, 'default.vue.html');
+    });
+
+    
+    test('CSS Handler Test for *.scss and file.html', function() {
+        const dir = 'd:/project/app';
+        const oldFile = 'default.scss';
+
+        const fsConfig: any = {};
+        fsConfig[dir] = {
+            'default.html': ''
+        };
+        mock(fsConfig);
+
+        const newFile = cssHandler.getNewUrlWithFileCheck(oldFile, dir);
+
+        assert.equal(newFile, 'default.html');
+
+        mock.restore();
+    });
+
+    test('CSS Handler Test for *.scss and file.vue.html', function() {
+        const dir = 'project/app';
+        const oldFile = 'default.scss';
+
+        const newFile = cssHandler.getNewUrlWithFileCheck(oldFile, dir);
 
         assert.equal(newFile, 'default.vue.html');
     });
