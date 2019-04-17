@@ -1,7 +1,7 @@
-import { ExtAdapter } from './adapter';
+import { ExtHandler } from './handler';
 import * as fs from 'fs';
 
-class TSAdapter extends ExtAdapter {
+class TSHandler extends ExtHandler {
     constructor() {
         super('.ts', '.html');
     }
@@ -21,4 +21,4 @@ class TSAdapter extends ExtAdapter {
     }
 }
 
-export default new TSAdapter();
+export default new TSHandler();

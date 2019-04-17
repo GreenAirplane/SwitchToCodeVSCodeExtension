@@ -2,11 +2,11 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import * as path from 'path';
-import aspxAdapter from './adapters/aspx-adapter';
-import aspxcsAdapter from './adapters/aspxcs-adapter';
-import htmlAdapter from './adapters/html-adapter';
-import tsAdapter from './adapters/ts-adapter';
-import vuehtmlAdapter from './adapters/vuehtml-adapter';
+import aspxHandler from './handlers/aspx-handler';
+import aspxcsHandler from './handlers/aspxcs-handler';
+import htmlHandler from './handlers/html-handler';
+import tsHandler from './handlers/ts-handler';
+import vuehtmlHandler from './handlers/vuehtml-handler';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -27,13 +27,13 @@ export function activate(context: vscode.ExtensionContext) {
             const dir = path.dirname(filePath);
             const fileName = path.basename(filePath);
 
-			let newFile;
+            let newFile;
             if (
-                !(newFile = aspxAdapter.getNewUrl(fileName)) &&
-                !(newFile = aspxcsAdapter.getNewUrl(fileName)) &&
-                !(newFile = vuehtmlAdapter.getNewUrl(fileName)) &&
-                !(newFile = htmlAdapter.getNewUrl(fileName)) &&
-                !(newFile = tsAdapter.getNewUrlWithFileCheck(fileName, dir))
+                !(newFile = aspxHandler.getNewUrl(fileName)) &&
+                !(newFile = aspxcsHandler.getNewUrl(fileName)) &&
+                !(newFile = vuehtmlHandler.getNewUrl(fileName)) &&
+                !(newFile = htmlHandler.getNewUrl(fileName)) &&
+                !(newFile = tsHandler.getNewUrlWithFileCheck(fileName, dir))
             ) {
                 return;
             }

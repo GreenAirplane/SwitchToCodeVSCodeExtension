@@ -7,50 +7,50 @@
 import * as assert from 'assert';
 const mock = require('mock-fs');
 
-import aspxAdapter from '../adapters/aspx-adapter';
-import aspxcsAdapter from '../adapters/aspxcs-adapter';
-import htmlAdapter from '../adapters/html-adapter';
-import tsAdapter from '../adapters/ts-adapter';
-import vuehtmlAdapter from '../adapters/vuehtml-adapter';
+import aspxHandler from '../handlers/aspx-handler';
+import aspxcsHandler from '../handlers/aspxcs-handler';
+import htmlHandler from '../handlers/html-handler';
+import tsHandler from '../handlers/ts-handler';
+import vuehtmlHandler from '../handlers/vuehtml-handler';
 
 // Defines a Mocha test suite to group tests of similar kind together
 suite('Extension Tests', function() {
-    test('ASPX Adapter Test for *.aspx', function() {
+    test('ASPX Handler Test for *.aspx', function() {
         const oldFile = 'default.aspx';
-        const newFile = aspxAdapter.getNewUrl(oldFile);
+        const newFile = aspxHandler.getNewUrl(oldFile);
 
         assert.equal(newFile, 'default.aspx.cs');
     });
 
-    test('ASPXCS Adapter Test for *.aspx.cs', function() {
+    test('ASPXCS Handler Test for *.aspx.cs', function() {
         const oldFile = 'default.aspx.cs';
-        const newFile = aspxcsAdapter.getNewUrl(oldFile);
+        const newFile = aspxcsHandler.getNewUrl(oldFile);
 
         assert.equal(newFile, 'default.aspx');
     });
 
-    test('ASPXCS Adapter Test for *.aspx', function() {
+    test('ASPXCS Handler Test for *.aspx', function() {
         const oldFile = 'default.aspx';
-        const newFile = aspxcsAdapter.getNewUrl(oldFile);
+        const newFile = aspxcsHandler.getNewUrl(oldFile);
 
         assert.equal(newFile, null);
     });
 
-    test('HTML Adapter Test for *.html', function() {
+    test('HTML Handler Test for *.html', function() {
         const oldFile = 'default.html';
-        const newFile = htmlAdapter.getNewUrl(oldFile);
+        const newFile = htmlHandler.getNewUrl(oldFile);
 
         assert.equal(newFile, 'default.ts');
     });
 
-    test('VueHTML Adapter Test for *.vue.html', function() {
+    test('VueHTML Handler Test for *.vue.html', function() {
         const oldFile = 'default.vue.html';
-        const newFile = vuehtmlAdapter.getNewUrl(oldFile);
+        const newFile = vuehtmlHandler.getNewUrl(oldFile);
 
         assert.equal(newFile, 'default.ts');
     });
 
-    test('TS Adapter Test for *.ts and file.html', function() {
+    test('TS Handler Test for *.ts and file.html', function() {
         const dir = 'd:/project/app';
         const oldFile = 'default.ts';
 
@@ -60,18 +60,18 @@ suite('Extension Tests', function() {
         };
         mock(fsConfig);
 
-        const newFile = tsAdapter.getNewUrlWithFileCheck(oldFile, dir);
+        const newFile = tsHandler.getNewUrlWithFileCheck(oldFile, dir);
 
         assert.equal(newFile, 'default.html');
 
         mock.restore();
     });
 
-    test('TS Adapter Test for *.ts and file.vue.html', function() {
+    test('TS Handler Test for *.ts and file.vue.html', function() {
         const dir = 'project/app';
         const oldFile = 'default.ts';
 
-        const newFile = tsAdapter.getNewUrlWithFileCheck(oldFile, dir);
+        const newFile = tsHandler.getNewUrlWithFileCheck(oldFile, dir);
 
         assert.equal(newFile, 'default.vue.html');
     });

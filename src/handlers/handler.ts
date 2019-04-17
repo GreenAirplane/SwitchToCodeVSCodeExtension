@@ -1,4 +1,4 @@
-export class ExtAdapter {
+export class ExtHandler {
     protected regExp: RegExp;
     protected newExt: string;
 
