@@ -12,3 +12,18 @@ All notable changes to the "switchtocode" extension will be documented in this f
 
 ## [1.0.1] - 2019-04-10
 Added information about how to use the extension
+
+## [1.0.2] - 2019-04-17
+###Added support of the following extensions:
+- *.css to *.html
+- *.css to *.vue.html
+- *.scss to *.html
+- *.scss to *.vue.html
+
+###Added new command "switchToCss" with support of the following extensions:
+- *.html to *.css
+- *.html to *.scss
+- *.vue.html to *.css
+- *.vue.html to *.scss
+- *.ts to *.css
+- *.ts to *.scss
