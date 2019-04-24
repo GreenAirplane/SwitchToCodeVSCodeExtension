@@ -27,3 +27,10 @@ Added information about how to use the extension
 - *.vue.html to *.scss
 - *.ts to *.css
 - *.ts to *.scss
+
+## [1.0.3] - 2019-04-24
+###Added support of the following extensions:
+- *.ascx to *.ascx.cs
+- *.ascx.cs to *.ascx
+- *.master to *.master.cs
+- *.master.cs to *.master

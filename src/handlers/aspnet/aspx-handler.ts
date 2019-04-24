@@ -1,4 +1,4 @@
-import { ExtHandler } from './handler';
+import { ExtHandler } from '../handler';
 
 class ASPXHandler extends ExtHandler {
     constructor() {

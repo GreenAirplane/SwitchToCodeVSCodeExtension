@@ -7,35 +7,12 @@
 import * as assert from 'assert';
 const mock = require('mock-fs');
 
-import aspxHandler from '../handlers/aspx-handler';
-import aspxcsHandler from '../handlers/aspxcs-handler';
 import htmlHandler from '../handlers/html-handler';
 import tsHandler from '../handlers/ts-handler';
 import vuehtmlHandler from '../handlers/vuehtml-handler';
 
 // Defines a Mocha test suite to group tests of similar kind together
 suite('Handlers Tests', function() {
-    test('ASPX Handler Test for *.aspx', function() {
-        const oldFile = 'default.aspx';
-        const newFile = aspxHandler.getNewUrl(oldFile);
-
-        assert.equal(newFile, 'default.aspx.cs');
-    });
-
-    test('ASPXCS Handler Test for *.aspx.cs', function() {
-        const oldFile = 'default.aspx.cs';
-        const newFile = aspxcsHandler.getNewUrl(oldFile);
-
-        assert.equal(newFile, 'default.aspx');
-    });
-
-    test('ASPXCS Handler Test for *.aspx', function() {
-        const oldFile = 'default.aspx';
-        const newFile = aspxcsHandler.getNewUrl(oldFile);
-
-        assert.equal(newFile, null);
-    });
-
     test('HTML Handler Test for *.html', function() {
         const oldFile = 'default.html';
         const newFile = htmlHandler.getNewUrl(oldFile);

@@ -16,8 +16,9 @@ Alternatively, you can edit your keyboard shortcuts and assign e.g. 'F7' to 'Swi
 ## Features
 
 'Switch to Code/Designer' command supports:
-- *.aspx to *.cs
-- *.cs to *.aspx
+- *.aspx to *.aspx.cs and *.aspx.cs to *.aspx
+- *.ascx to *.ascx.cs and *.ascx.cs to *.ascx
+- *.master to *.master.cs and *.master.cs to *.master
 - *.vue.html to *.ts
 - *.html to *.ts
 - *.ts to *.html and if not exists then to *.vue.html
