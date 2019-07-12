@@ -4,7 +4,9 @@
 	"description": "Allows to switch between html/ts, aspx/cs, ascx/cs, master/cs, vue.html/ts and css files",
 	"version": "1.0.3",
 	"publisher": "AlexShashkin",
-	"repository": {"url": "https://github.com/GreenAirplane/SwitchToCodeVSCodeExtension"},
+	"repository": {
+		"url": "https://github.com/GreenAirplane/SwitchToCodeVSCodeExtension"
+	},
 	"engines": {
 		"vscode": "^1.33.0"
 	},
@@ -37,10 +39,10 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "^2.2.42",
-		"@types/node": "^10.12.21",
-		"mock-fs": "^4.8.0",
-		"tslint": "^5.12.1",
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28"
+		"@types/node": "^10.14.12",
+		"mock-fs": "^4.10.1",
+		"tslint": "^5.18.0",
+		"typescript": "^3.5.3",
+		"vscode": "^1.1.35"
 	}
 }
