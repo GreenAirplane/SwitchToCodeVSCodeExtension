@@ -34,3 +34,7 @@ Added information about how to use the extension
 - *.ascx.cs to *.ascx
 - *.master to *.master.cs
 - *.master.cs to *.master
+
+## [1.0.4] - 2019-07-12
+- npm dependencies updated.
+- README file updated.
