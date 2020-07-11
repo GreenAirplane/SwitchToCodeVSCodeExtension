@@ -27,7 +27,6 @@ export default function switchToCode() {
         !(newFile = htmlHandler.getNewUrl(fileName)) &&
         !(newFile = tsHandler.getNewUrlWithFileCheck(fileName, dir)) &&
         !(newFile = cssHandler.getNewUrlWithFileCheck(fileName, dir)) &&
-
         !(newFile = aspxHandler.getNewUrl(fileName)) &&
         !(newFile = aspxcsHandler.getNewUrl(fileName)) &&
         !(newFile = ascxHandler.getNewUrl(fileName)) &&
@@ -41,7 +40,7 @@ export default function switchToCode() {
     newFile = `${dir}\\${newFile}`;
     const openPath = vscode.Uri.file(newFile);
 
-    vscode.workspace.openTextDocument(openPath).then(doc => {
+    vscode.workspace.openTextDocument(openPath).then((doc) => {
         vscode.window.showTextDocument(doc);
     });
 }

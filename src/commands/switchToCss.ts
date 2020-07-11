@@ -15,7 +15,10 @@ export default function switchToCss() {
 
     let newFile;
     if (
-        !(newFile = vueHTMLToCssHandler.getNewUrlWithFileCheck(fileName, dir)) &&
+        !(newFile = vueHTMLToCssHandler.getNewUrlWithFileCheck(
+            fileName,
+            dir
+        )) &&
         !(newFile = htmlToCssHandler.getNewUrlWithFileCheck(fileName, dir)) &&
         !(newFile = tsToCssHandler.getNewUrlWithFileCheck(fileName, dir))
     ) {
@@ -25,7 +28,7 @@ export default function switchToCss() {
     newFile = `${dir}\\${newFile}`;
     const openPath = vscode.Uri.file(newFile);
 
-    vscode.workspace.openTextDocument(openPath).then(doc => {
+    vscode.workspace.openTextDocument(openPath).then((doc) => {
         vscode.window.showTextDocument(doc);
     });
 }
