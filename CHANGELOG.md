@@ -38,3 +38,6 @@ Added information about how to use the extension
 ## [1.0.4] - 2019-07-12
 - npm dependencies updated.
 - README file updated.
+
+## [1.0.5] - [1.2.1] - 2020-07-11
+- npm dependencies updated.
