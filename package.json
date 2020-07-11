@@ -2,7 +2,7 @@
 	"name": "switchtocode",
 	"displayName": "SwitchToCode",
 	"description": "Allows to switch between html/ts, aspx/cs, ascx/cs, master/cs, vue.html/ts and css files",
-	"version": "1.0.4",
+	"version": "1.2.1",
 	"publisher": "AlexShashkin",
 	"repository": {
 		"url": "https://github.com/GreenAirplane/SwitchToCodeVSCodeExtension"
