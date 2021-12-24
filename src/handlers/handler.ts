@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import * as path from 'path';
 
 export class ExtHandler {
     protected regExp: RegExp;
@@ -30,8 +31,8 @@ export class ExtHandler {
             return null;
         }
 
-        const path = `${dir}\\${newFile}`;
-        if (fs.existsSync(path)) {
+        const filePath = path.join(dir, newFile);
+        if (fs.existsSync(filePath)) {
             return newFile;
         } else {
             return oldFile.replace(this.regExp, this.fallbackExt);

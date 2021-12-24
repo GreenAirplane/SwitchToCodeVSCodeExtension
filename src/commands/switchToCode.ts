@@ -37,7 +37,7 @@ export default function switchToCode() {
         return;
     }
 
-    newFile = `${dir}\\${newFile}`;
+    newFile = path.join(dir, newFile);
     const openPath = vscode.Uri.file(newFile);
 
     vscode.workspace.openTextDocument(openPath).then((doc) => {
