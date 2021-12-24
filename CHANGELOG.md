@@ -45,3 +45,6 @@ Added information about how to use the extension
 ## [1.2.2] - 2021-12-24
 - npm dependencies updated.
 - fixed issue related to incorrect path concatenation on *nix.
+
+## [1.2.3] - 2021-12-24
+- VSCode engine updated to 1.63.0
