@@ -41,3 +41,7 @@ Added information about how to use the extension
 
 ## [1.0.5] - [1.2.1] - 2020-07-11
 - npm dependencies updated.
+
+## [1.2.2] - 2021-12-24
+- npm dependencies updated.
+- fixed issue related to incorrect path concatenation on *nix.
