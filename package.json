@@ -8,7 +8,7 @@
 		"url": "https://github.com/GreenAirplane/SwitchToCodeVSCodeExtension"
 	},
 	"engines": {
-		"vscode": "^1.47.0"
+		"vscode": "^1.63.0"
 	},
 	"categories": [
 		"Other"
